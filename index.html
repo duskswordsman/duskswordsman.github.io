@@ -4,17 +4,14 @@
 <head>
   <title>Pondemic Creations</title>
   <script>
-    var choise = 1
+    var choise = '#o1'
     
-    function mouselog(id) {
-      text.value = id;
-      if (id == 1) {
-        document.querySelector('#1').style.background = 'pink'
-        document.querySelector('#2').style.background = 'black'}
-      else {
-        document.querySelector('#1').style.background = 'black'
-        document.querySelector('#2').style.background = 'pink'}
-}
+    function mouselog() {
+      text.value = event.target.id;
+      document.querySelector(choise).classList.remove('active');
+      event.target.classList.add('active');
+      choise = '#'+event.target.id
+    }
   </script>
   
   <style>
@@ -25,13 +22,22 @@
     body {
       font-size: 200%; 
       font-family: pixel; 
-      color: #333366;
+      color: #333333;
     }
+    a {color: #888888}
+    
+    .active {color: #ffffff}
   </style>
 </head>
 <body id="0" bgcolor="#1f1f1f" align="center">
-<p><a id="1" onmouseenter="mouselog(1)" href="spacesparkle/index.html">Space Sparkle</a></p>
-<p><a id="2" onmouseenter="mouselog(2)" href="spacesparkle/index.html">Space Sparkle</a></p>
+  <p><a id="o1" onmouseenter="mouselog(1)" href="spacesparkle/index.html" class="active">Space Sparkle</a></p>
+  <p><a id="o2" onmouseenter="mouselog(2)" href="spacesparkle/index.html">Rainball Dash</a></p>
+  <p>Super Bun Horse</p>
+  <p>Twilight Warriors</p>
+  <p>Rambow Dash</p>
+  <p>Pondemic</p>
+  <p>Dangerous Derpy</p>
+  <p>Street Beat</p>
 <textarea id="text"></textarea>
 </body>
 </html>
