@@ -12,6 +12,12 @@
       event.target.classList.add('active');
       choise = '#'+event.target.id
     }
+    
+    document.addEventListener('keydown', function(event) {
+      if (event.code == 'Space' ||  event.code == 'Enter') {
+       document.location.href = document.querySelector(choise).href
+       }
+     })
   </script>
   
   <style>
@@ -22,9 +28,9 @@
     body {
       font-size: 200%; 
       font-family: pixel; 
-      color: #333333;
+      color: #222222;
     }
-    a {color: #888888}
+    a {color: #555555}
     
     .active {color: #ffffff}
   </style>
@@ -33,11 +39,12 @@
   <p><a id="o1" onmouseenter="mouselog(1)" href="spacesparkle/index.html" class="active">Space Sparkle</a></p>
   <p><a id="o2" onmouseenter="mouselog(2)" href="spacesparkle/index.html">Rainball Dash</a></p>
   <p>Super Bun Horse</p>
-  <p>Twilight Warriors</p>
+  <p>TwiliGht Warriors</p>
   <p>Rambow Dash</p>
   <p>Pondemic</p>
-  <p>Dangerous Derpy</p>
+  <p>DanGerous Derpy</p>
   <p>Street Beat</p>
+  <p>Frostpony</p>
 <textarea id="text"></textarea>
 </body>
 </html>
