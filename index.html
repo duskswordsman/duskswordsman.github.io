@@ -5,6 +5,12 @@
   <title>Pondemic Creations</title>
   <script>
     var choise = 1
+    
+    function mouselog(event) {
+  let d = new Date();
+  text.value += `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} | ${event.type} [target: ${event.target.id}]\n`.replace(/(:|^)(\d\D)/, '$10$2');
+  text.scrollTop = text.scrollHeight;
+}
   </script>
   
   <style>
@@ -22,5 +28,6 @@
 <body id="0" bgcolor="#1f1f1f" align="center">
 <p><a id="1" href="spacesparkle/index.html">Space Sparkle</a></p>
 <p><a id="2" href="spacesparkle/index.html">Space Sparkle</a></p>
+<textarea id="text"></textarea>
 </body>
 </html>
